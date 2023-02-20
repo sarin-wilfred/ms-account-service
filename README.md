@@ -4,7 +4,7 @@ Assumption: - Machine with java, gradle, intellij idea.
 1. Import the project from github.
 2. Run the docker compose to install containers for postgres and pgAdmin.
 3. Run maven clean install to generate the mapstruct java files.
-4. Enable annotation processing inntellij idea (for lombock).
+4. Enable annotation processing in intellij idea (for lombock).
 5. Run the Application main class from intellij idea.
 
 Technologies used: - Java, spring-boot, mapstruct(for mapping), maven, postgres, h2-DB(for testing) liquibase.
