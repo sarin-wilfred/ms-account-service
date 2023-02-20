@@ -1,0 +1,2 @@
+insert into user_profile(id, user_name) values (1, 'TestX');
+insert into account(account_number, user_profile_id, account_name, account_type, balance_date, currency, opening_available_balance) values (1, 1, 'TestX11', 'Savings', '2022-07-22','AUS', 1000.10);

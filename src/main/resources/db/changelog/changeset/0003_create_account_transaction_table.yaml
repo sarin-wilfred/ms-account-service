@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_account_table
+      author: Sarin Wilfred
+      changes:
+        - createTable:
+            tableName: account_transaction
+            remarks: Table contains account transacton details
+            schemaName: public
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: account_number
+                  type: bigserial
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_account_transaction_account
+                    references: account(number)
+              - column:
+                  name: user_profile_id
+                  type: serial
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_account_transaction_user_profile
+                    references: user_profile(id)
+              - column:
+                  name: value_date
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: currency
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: debit_amount
+                  type: money
+                  constraints:
+                    nullable: true
+              - column:
+                  name: credit_amount
+                  type: money
+                  constraints:
+                    nullable: true
+              - column:
+                  name: transaction_type
+                  type: varchar(20)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: transaction_narrative
+                  type: varchar(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: version
+                  type: serial
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_date
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_modified_date
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false

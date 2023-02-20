@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_user_profiles
+      author: Sarin Wilfred
+      changes:
+        - sql:
+            dbms: all
+            splitStatements: true
+            stripComments: true
+            sql:
+              insert into public.user_profile(user_name, version) values ('TestX', 1);
+              insert into public.user_profile(user_name, version) values ('TestY', 1);
+              insert into public.user_profile(user_name, version) values ('TestZ', 1);

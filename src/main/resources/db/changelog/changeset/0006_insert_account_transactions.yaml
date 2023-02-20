@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert_account_transactions
+      author: Sarin Wilfred
+      changes:
+        - sql:
+            dbms: all
+            splitStatements: true
+            stripComments: true
+            sql:
+              insert into public.account_transaction(account_number, user_profile_id, value_date, currency, debit_amount, credit_amount, transaction_type, transaction_narrative, version) values (1, 1, '2022-07-22', 'AUD',null,300, 'CREDIT',null, 1);
+              insert into public.account_transaction(account_number, user_profile_id, value_date, currency, debit_amount, credit_amount, transaction_type, transaction_narrative, version) values (1, 1, '2022-07-23', 'AUD',null,300, 'CREDIT',null, 1);
+              insert into public.account_transaction(account_number, user_profile_id, value_date, currency, debit_amount, credit_amount, transaction_type, transaction_narrative, version) values (1, 1, '2022-07-24', 'AUD',100,null, 'DEBIT','Test', 1);
+              insert into public.account_transaction(account_number, user_profile_id, value_date, currency, debit_amount, credit_amount, transaction_type, transaction_narrative, version) values (6, 2, '2022-08-24', 'SGD',null,400, 'CREDIT',null, 1);
+              insert into public.account_transaction(account_number, user_profile_id, value_date, currency, debit_amount, credit_amount, transaction_type, transaction_narrative, version) values (6, 2, '2022-08-25', 'SGD',null,400, 'CREDIT',null, 1);
+              insert into public.account_transaction(account_number, user_profile_id, value_date, currency, debit_amount, credit_amount, transaction_type, transaction_narrative, version) values (6, 2, '2022-08-26', 'SGD',100,null, 'DEBIT','Test', 1);

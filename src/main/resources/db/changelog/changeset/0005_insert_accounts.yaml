@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-accounts
+      author: Sarin Wilfred
+      changes:
+        - sql:
+            dbms: all
+            splitStatements: true
+            stripComments: true
+            sql:
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (1, 'TestX11', 'SAVINGS', '2022-07-22','AUD', 1000.10, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (1, 'TestX12', 'CURRENT', '2022-07-23','AUD', 10050.15, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (1, 'TestX13', 'SAVINGS', '2022-07-24','SGD', 2000.20, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (2, 'TestX21', 'SAVINGS', '2022-08-22','AUD', 2000.10, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (2, 'TestX22', 'CURRENT', '2022-08-23','AUD', 20050.15, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (2, 'TestX23', 'SAVINGS', '2022-08-24','SGD', 3000.20, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (3, 'TestX31', 'SAVINGS', '2022-09-22','AUD', 3000.10, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (3, 'TestX32', 'CURRENT', '2022-09-23','AUD', 30050.15, 1);
+              insert into public.account(user_profile_id, name, type, balance_date, currency, opening_available_balance, version) values (3, 'TestX33', 'SAVINGS', '2022-09-24','SGD', 4000.20, 1);

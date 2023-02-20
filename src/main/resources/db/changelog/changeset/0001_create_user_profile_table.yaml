@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_user_profile_table
+      author: Sarin Wilfred
+      changes:
+        - createTable:
+            tableName: user_profile
+            remarks: Table contains user details
+            schemaName: public
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: version
+                  type: serial
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_date
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_modified_date
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false

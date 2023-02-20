@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/0001_create_user_profile_table.yaml
+  - include:
+      file: db/changelog/changeset/0002_create_account_table.yaml
+  - include:
+      file: db/changelog/changeset/0003_create_account_transaction_table.yaml
+  - include:
+      file: db/changelog/changeset/0004_insert_user_profiles.yaml
+  - include:
+      file: db/changelog/changeset/0005_insert_accounts.yaml
+  - include:
+      file: db/changelog/changeset/0006_insert_account_transactions.yaml
