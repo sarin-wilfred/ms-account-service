@@ -19,6 +19,10 @@ http://localhost:8082/swagger-ui/index.html
 
 Sample rest endpoint calls
 ----------------------------
-http://localhost:8082/api/accounts/1
-http://localhost:8082/api/accountTransactions/1
+1. List accounts by user profile id: http://localhost:8082/api/accounts/1
+2. List account transactions by account number: http://localhost:8082/api/accountTransactions/1
+
+Configured matching user profile id in postgres DB are 1, 2 and 3.
+
+Configured matching account number in postgres DB are 1 and 6.
 
