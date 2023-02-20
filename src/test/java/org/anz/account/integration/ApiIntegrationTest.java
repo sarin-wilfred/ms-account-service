@@ -70,7 +70,7 @@ public class ApiIntegrationTest {
     }
 
     @Test
-    public void testApiAccountsForSuccess() throws AccountServiceException {
+    public void testApiAccountsForSuccess() {
         webTestClient
                 .post()
                 .uri("/api/accounts/{userProfileId}", 1)
@@ -85,7 +85,7 @@ public class ApiIntegrationTest {
     }
 
     @Test
-    public void testApiAccountTransactionsForSuccess() throws AccountServiceException {
+    public void testApiAccountTransactionsForSuccess() {
         webTestClient
                 .post()
                 .uri("/api/accountTransactions/{accountNumber}", 1)
@@ -100,7 +100,7 @@ public class ApiIntegrationTest {
     }
 
     @Test
-    public void testApiAccountsForNumberFormatException() throws AccountServiceException {
+    public void testApiAccountsForNumberFormatException() {
         webTestClient
                 .post()
                 .uri("/api/accounts/{userProfileId}", "1a")
@@ -115,7 +115,7 @@ public class ApiIntegrationTest {
     }
 
     @Test
-    public void testApiAccountTransactionsForNumberFormatException() throws AccountServiceException {
+    public void testApiAccountTransactionsForNumberFormatException() {
         webTestClient
                 .post()
                 .uri("/api/accountTransactions/{accountNumber}", "1a")
